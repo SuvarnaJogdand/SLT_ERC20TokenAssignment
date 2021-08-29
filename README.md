@@ -32,10 +32,15 @@ Assignment Summary -
 
 1.  SoluLabToken contact is used to create ERC20 Token with Pusuable, Mintable. It contains SLT token smart contract. SLT is a capped, pusuable and mintable token with an option to set totalSuppy (Cap) not cap adjustment.
 2.  BaseSoluLabICOSale is an abstract contract to use for Crowdsale, CappedCrowdsale, TimedCrowdsale, RefundableCrowdsale as current Openzeppelin contract doesn't have crowdsale mechanism so, customised all above Crowdsale from openzeppelin@2.5.x version with compatible for solidity 0.8.0. Also, it contains the general functionality of the crowdsale staging given in the Assignment as Presale, SecondSale and Final Sale rates would be $0.01, $0.02 and dynamic rate respectively. Not handled dynamic rates as was not clear the strategy of dynamic rate however, keep as $1 value for final sale. Find CrowdSale related contracts in the folder "contracts/crowdsale".
+
 •	It allows to set the ETHUSD rate
+
 •	Any payment less than ETHER_THRESHOLD (100 finney) will be rejected
+
 •	ETHMNR rate is defined as ETHUSD 
+
 •	After the end of crowdsale the ownership of the token instance will be transferred to original owner.
+
 3.  SoluLabICOSale  contract is used for different staged sales (PreSale, SecondSale and FinalSale). This is being used for ICO PreSale, SecondSale and FinalSale and have ability to set goals for each stage (e.g. supply for stage and rate for stage).
 
 Assumption -
