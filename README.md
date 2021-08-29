@@ -59,7 +59,13 @@ Check code from - https://github.com/SuvarnaJogdand/SLT_ERC20TokenAssignment
 
 	•	truffle compile
 	
-4.	Migration and Deployment
+4.	Migration and Deployment - Before executing below command, need to start the Ganache and should run at host: "127.0.0.1" and port: 7545
+                                   If Ganache is running on different host and port, need to modify truffle-config.js for the host and port under
+				   networks: {
+                                              develop: {
+                                              host: "127.0.0.1",
+                                              port: 7545
+                                             }
 
 	•	truffle migrate
 
